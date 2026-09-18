@@ -1,0 +1,1718 @@
+{
+  "app": {
+    "title": "إشارة — لغة الإشارة المصرية",
+    "tagline": "المرجع الموثق للغة الإشارة المصرية (ESL)",
+    "description": "منصة تعليمية ومعجم تفاعلي موثق للغة الإشارة المصرية الأصيلة وفقاً للأبحاث اللغوية وقواعد مجتمع الصم المصري.",
+    "research_basis": "The content and database are derived from official documentation and linguistic research on natural Egyptian Sign Language (ESL), incorporating the verified phonological rules, grammar structure, and cultural guidelines used by the Deaf community in Egypt.",
+    "research_basis_ar": "المحتوى وقاعدة البيانات مستمدان من الوثائق الرسمية والأبحاث اللغوية للغة الإشارة المصرية الطبيعية (ESL)، مع تضمين القواعد الفونولوجية، والبنية النحوية، والإرشادات الثقافية المعتمدة لدى مجتمع الصم في مصر."
+  },
+  "categories": [
+    {
+      "id": "alphabet",
+      "name_ar": "الأبجدية الإشارية",
+      "icon": "✋",
+      "description": "تمثيل بصري لحروف الهجاء يعتمد على شكل الحرف وعدد النقاط."
+    },
+    {
+      "id": "numbers",
+      "name_ar": "الأرقام",
+      "icon": "🔢",
+      "description": "نظام الأرقام الإشارية وقواعد الآحاد والعشرات والمئات والآلاف."
+    },
+    {
+      "id": "daily",
+      "name_ar": "كلمات وضمائر يومية",
+      "icon": "💬",
+      "description": "الضمائر الأساسية وأدوات الاستفهام المستخدمة يومياً."
+    },
+    {
+      "id": "greetings",
+      "name_ar": "التحيات وآداب الحديث",
+      "icon": "👋",
+      "description": "تحية اللقاء والشكر والاعتذار والسلام."
+    },
+    {
+      "id": "family",
+      "name_ar": "العائلة",
+      "icon": "👨‍👩‍👧",
+      "description": "إشارات الوالدين والإخوة والأجداد ومرجعياتها الثقافية."
+    },
+    {
+      "id": "food",
+      "name_ar": "الأكل والشرب",
+      "icon": "🍎",
+      "description": "الأطعمة والمشروبات اليومية في الثقافة المصرية."
+    },
+    {
+      "id": "home",
+      "name_ar": "البيت",
+      "icon": "🏠",
+      "description": "مفردات أجزاء المنزل والأثاث الأساسي."
+    },
+    {
+      "id": "school",
+      "name_ar": "المدرسة والتعليم",
+      "icon": "🏫",
+      "description": "إشارات التعلم، الكتب، وأدوات الدراسة."
+    },
+    {
+      "id": "emotions",
+      "name_ar": "المشاعر",
+      "icon": "❤️",
+      "description": "التعبير عن الفرح، الحزن، الحب، والغضب وتعبيرات الوجه المرافقة."
+    },
+    {
+      "id": "animals",
+      "name_ar": "الحيوانات",
+      "icon": "🐱",
+      "description": "إشارات تمثيلية لحركات وهيئات الكائنات الحية."
+    },
+    {
+      "id": "time",
+      "name_ar": "الزمان والوقت",
+      "icon": "⏳",
+      "description": "الخط الزمني الإشاري للتعبير عن اليوم والأمس والغد."
+    },
+    {
+      "id": "colors",
+      "name_ar": "الألوان",
+      "icon": "🎨",
+      "description": "إشارات الألوان الأساسية ودلالاتها البصرية الأصيلة في لغة الإشارة المصرية."
+    },
+    {
+      "id": "health",
+      "name_ar": "الصحة والطوارئ",
+      "icon": "🏥",
+      "description": "إشارات الطبيب والمستشفى والإسعاف والأعراض للتواصل العلاجي الدقيق."
+    },
+    {
+      "id": "clothes",
+      "name_ar": "الملابس والزينة",
+      "icon": "👔",
+      "description": "إشارات قطع الثياب اليومية والإكسسوارات ومواضع ارتدائها."
+    },
+    {
+      "id": "expressions",
+      "name_ar": "تعبيرات وعبارات يومية",
+      "icon": "🤝",
+      "description": "جمل وتعبيرات التحية والاستفسار الشائعة في المحادثة المصرية اليومية."
+    },
+    {
+      "id": "questions",
+      "name_ar": "الأسئلة والاستفسارات",
+      "icon": "❓",
+      "description": "أدوات الاستفهام الأساسية وإشارات الإجابة والتأكيد والنفي في لغة الإشارة المصرية."
+    }
+  ],
+  "alphabet": [
+    {
+      "id": "letter-alif",
+      "letter": "أ",
+      "name_ar": "الألف",
+      "rule": "خط رأسي (Vertical Line)",
+      "description": "السبابة ممتدة للأعلى باستقامة لمحاكاة عصا الألف، وباقي الأصابع مضمومة بالكامل.",
+      "orientation": "راحة اليد موجهة للمستقبل، وظهر اليد للمُشير.",
+      "dots": 0,
+      "media_local_path": "assets/signs/letter-alif.png"
+    },
+    {
+      "id": "letter-baa",
+      "letter": "ب",
+      "name_ar": "الباء",
+      "rule": "نقطة واحدة بالأسفل (Single Dot Below)",
+      "description": "شكل اليد يماثل الانحناء الأفقي لصحن الباء مع إصبع يشير إلى النقطة الواحدة بالأسفل.",
+      "orientation": "راحة اليد متجهة للمستقبل.",
+      "dots": 1,
+      "media_local_path": "assets/signs/letter-baa.png"
+    },
+    {
+      "id": "letter-taa",
+      "letter": "ت",
+      "name_ar": "التاء",
+      "rule": "نقطتان بالأعلى (Two Dots Above)",
+      "description": "شكل اليد يماثل الانحناء الأفقي، مع تمديد إصبعين للأعلى دلالة على النقطتين.",
+      "orientation": "راحة اليد متجهة للمستقبل.",
+      "dots": 2,
+      "media_local_path": "assets/signs/letter-taa.png"
+    },
+    {
+      "id": "letter-thaa",
+      "letter": "ث",
+      "name_ar": "الثاء",
+      "rule": "ثلاث نقاط بالأعلى (Three Dots Above)",
+      "description": "انحناء أفقي مع تمديد ثلاثة أصابع للأعلى دلالة على النقاط الثلاث.",
+      "orientation": "راحة اليد متجهة للمستقبل.",
+      "dots": 3,
+      "media_local_path": "assets/signs/letter-thaa.png"
+    },
+    {
+      "id": "letter-jeem",
+      "letter": "ج",
+      "name_ar": "الجيم",
+      "rule": "انحناء سفلي + نقطة بالداخل",
+      "description": "اليد تشكل انحناء هابطاً يماثل بطن الجيم مع مؤشر موضعي للنقطة الداخلية.",
+      "orientation": "راحة اليد متجهة للمستقبل.",
+      "dots": 1,
+      "media_local_path": "assets/signs/letter-jeem.png"
+    },
+    {
+      "id": "letter-haa",
+      "letter": "ح",
+      "name_ar": "الحاء",
+      "rule": "انحناء بدون نقاط (Curvature - No Dot)",
+      "description": "محاكاة دقيقة لانحناء بطن الحاء دون أي إصبع إضافي للنقاط.",
+      "orientation": "راحة اليد متجهة للمستقبل.",
+      "dots": 0,
+      "media_local_path": "assets/signs/letter-haa.png"
+    },
+    {
+      "id": "letter-khaa",
+      "letter": "خ",
+      "name_ar": "الخاء",
+      "rule": "انحناء + نقطة علوية (Curvature + Upper Dot)",
+      "description": "محاكاة انحناء الجيم/الحاء مع إصبع ممتد للأعلى دلالة على النقطة فوق الحرف.",
+      "orientation": "راحة اليد متجهة للمستقبل.",
+      "dots": 1,
+      "media_local_path": "assets/signs/letter-khaa.png"
+    },
+    {
+      "id": "letter-daal",
+      "letter": "د",
+      "name_ar": "الدال",
+      "rule": "زاوية قائمة (Right Angle)",
+      "description": "السبابة والإبهام يشكلان زاوية قائمة (حرف L مستلقٍ على جنبه) متجهاً لليسار.",
+      "orientation": "راحة اليد موجهة للداخل جانباً.",
+      "dots": 0,
+      "media_local_path": "assets/signs/letter-daal.png"
+    },
+    {
+      "id": "letter-thaal",
+      "letter": "ذ",
+      "name_ar": "الذال",
+      "rule": "زاوية قائمة + نقطة",
+      "description": "مثل الدال تماماً، مع تمديد الإصبع الأوسط للأعلى لتمثيل النقطة العلوية.",
+      "orientation": "راحة اليد موجهة للداخل جانباً.",
+      "dots": 1,
+      "media_local_path": "assets/signs/letter-thaal.png"
+    },
+    {
+      "id": "letter-raa",
+      "letter": "ر",
+      "name_ar": "الراء",
+      "rule": "انحدار هابط (Downward Slope)",
+      "description": "السبابة تشير للأسفل وتتحرك في انحناء خفيف لمحاكاة زحليقة الراء.",
+      "orientation": "راحة اليد متجهة للداخل.",
+      "dots": 0,
+      "media_local_path": "assets/signs/letter-raa.png"
+    },
+    {
+      "id": "letter-zayn",
+      "letter": "ز",
+      "name_ar": "الزاي",
+      "rule": "انحدار هابط + نقطة",
+      "description": "انحناء هابط مثل الراء مع استخدام إصبعين (السبابة والوسطى) لتمثيل النقطة.",
+      "orientation": "راحة اليد متجهة للداخل.",
+      "dots": 1,
+      "media_local_path": "assets/signs/letter-zayn.png"
+    },
+    {
+      "id": "letter-seen",
+      "letter": "س",
+      "name_ar": "السين",
+      "rule": "ثلاثة أسنان (Three Teeth)",
+      "description": "السبابة والوسطى والبنصر ممتدة ومنحنية قليلاً لمحاكاة سنون حرف السين.",
+      "orientation": "راحة اليد موجهة للأمام.",
+      "dots": 0,
+      "media_local_path": "assets/signs/letter-seen.png"
+    },
+    {
+      "id": "letter-sheen",
+      "letter": "ش",
+      "name_ar": "الشين",
+      "rule": "ثلاثة أسنان + نقاط",
+      "description": "شكل اليد المماثل للسين مع حركة اهتزازية أو إشارية لنقاط الشين الثلاث.",
+      "orientation": "راحة اليد موجهة للأمام.",
+      "dots": 3,
+      "media_local_path": "assets/signs/letter-sheen.png"
+    },
+    {
+      "id": "letter-saad",
+      "letter": "ص",
+      "name_ar": "الصاد",
+      "rule": "حلقة مغلقة (Closed Loop)",
+      "description": "الإبهام والسبابة يشكلان حلقة بيضاوية مغلقة، وباقي الأصابع مضمومة.",
+      "orientation": "راحة اليد موجهة للمستقبل.",
+      "dots": 0,
+      "media_local_path": "assets/signs/letter-saad.png"
+    },
+    {
+      "id": "letter-daad",
+      "letter": "ض",
+      "name_ar": "الضاد",
+      "rule": "حلقة مغلقة + نقطة",
+      "description": "حلقة الصاد مع تمديد الإصبع الأوسط لتمثيل النقطة العلوية.",
+      "orientation": "راحة اليد موجهة للمستقبل.",
+      "dots": 1,
+      "media_local_path": "assets/signs/letter-daad.png"
+    },
+    {
+      "id": "letter-taa-makhsoos",
+      "letter": "ط",
+      "name_ar": "الطاء",
+      "rule": "عمود على قاعدة مسطحة",
+      "description": "السبابة تشير مستقيمة للأعلى مستندة على الإبهام (أو اليد الأخرى) كقاعدة مسطحة.",
+      "orientation": "راحة اليد موجهة جانباً.",
+      "dots": 0,
+      "media_local_path": "assets/signs/letter-taa-makhsoos.png"
+    },
+    {
+      "id": "letter-zaa",
+      "letter": "ظ",
+      "name_ar": "الظاء",
+      "rule": "عمود على قاعدة + نقطة",
+      "description": "مثل الطاء مع تمديد إصبع إضافي للأعلى للدلالة على النقطة.",
+      "orientation": "راحة اليد موجهة جانباً.",
+      "dots": 1,
+      "media_local_path": "assets/signs/letter-zaa.png"
+    },
+    {
+      "id": "letter-ayn",
+      "letter": "ع",
+      "name_ar": "العين",
+      "rule": "قوس مفتوح (Open Curve)",
+      "description": "السبابة والإبهام يشكلان حرف C مفتوحاً متجهاً للخارج أو الأسفل لمحاكاة حاجب العين.",
+      "orientation": "راحة اليد متجهة جانباً.",
+      "dots": 0,
+      "media_local_path": "assets/signs/letter-ayn.png"
+    },
+    {
+      "id": "letter-ghayn",
+      "letter": "غ",
+      "name_ar": "الغين",
+      "rule": "قوس مفتوح + نقطة",
+      "description": "شكل العين (قوس C) مع إصبع إضافي ممتد للأعلى لتمثيل النقطة.",
+      "orientation": "راحة اليد متجهة جانباً.",
+      "dots": 1,
+      "media_local_path": "assets/signs/letter-ghayn.png"
+    },
+    {
+      "id": "letter-faa",
+      "letter": "ف",
+      "name_ar": "الفاء",
+      "rule": "دائرة + نقطة واحدة",
+      "description": "السبابة والإبهام يلتقيان في دائرة، والإصبع الأوسط يشير للأعلى كـ نقطة وحيدة.",
+      "orientation": "راحة اليد موجهة للأمام.",
+      "dots": 1,
+      "media_local_path": "assets/signs/letter-faa.png"
+    },
+    {
+      "id": "letter-qaaf",
+      "letter": "ق",
+      "name_ar": "القاف",
+      "rule": "دائرة + نقطتان",
+      "description": "السبابة والإبهام يشكلان دائرة، والوسطى والبنصر يمتدان للأعلى دلالة على النقطتين.",
+      "orientation": "راحة اليد موجهة للأمام.",
+      "dots": 2,
+      "media_local_path": "assets/signs/letter-qaaf.png"
+    },
+    {
+      "id": "letter-kaaf",
+      "letter": "ك",
+      "name_ar": "الكاف",
+      "rule": "كرسي / خطاف (Chair/Hook)",
+      "description": "السبابة والإبهام يشكلان زاوية قائمة متجهة للأعلى لمحاكاة كرسي الكاف.",
+      "orientation": "راحة اليد متجهة للمستقبل.",
+      "dots": 0,
+      "media_local_path": "assets/signs/letter-kaaf.png"
+    },
+    {
+      "id": "letter-laam",
+      "letter": "ل",
+      "name_ar": "اللام",
+      "rule": "لام رأسية (Vertical L)",
+      "description": "السبابة ممتدة للأعلى والإبهام ممتد للجانب (مثل حرف L الإنجليزي بتوجيه عربي).",
+      "orientation": "راحة اليد متجهة للمستقبل.",
+      "dots": 0,
+      "media_local_path": "assets/signs/letter-laam.png"
+    },
+    {
+      "id": "letter-meem",
+      "letter": "م",
+      "name_ar": "الميم",
+      "rule": "دائرة هابطة (Downward Circle)",
+      "description": "اليد تشكل دائرة كروية O موجهة للأسفل لمحاكاة رأس الميم وقدمها.",
+      "orientation": "أطراف الأصابع متجهة للأسفل.",
+      "dots": 0,
+      "media_local_path": "assets/signs/letter-meem.png"
+    },
+    {
+      "id": "letter-noon",
+      "letter": "ن",
+      "name_ar": "النون",
+      "rule": "كأس صاعد (Upward Cup)",
+      "description": "اليد مقعرة كالكأس للأعلى، والسبابة ممتدة في المنتصف لتمثيل نقطة النون المركزية.",
+      "orientation": "كف اليد مجوف للأعلى.",
+      "dots": 1,
+      "media_local_path": "assets/signs/letter-noon.png"
+    },
+    {
+      "id": "letter-haa-isolated",
+      "letter": "هـ",
+      "name_ar": "الهاء",
+      "rule": "حلقة مزدوجة (Double Loop)",
+      "description": "السبابة والوسطى تتقاطعان فوق الإبهام لمحاكاة حلقات الهاء، أو حركة انفنيتي خفيفة.",
+      "orientation": "راحة اليد متجهة للأمام.",
+      "dots": 0,
+      "media_local_path": "assets/signs/letter-haa-isolated.png"
+    },
+    {
+      "id": "letter-waaw",
+      "letter": "و",
+      "name_ar": "الواو",
+      "rule": "دائرة بذيل (Circle with Tail)",
+      "description": "الإبهام والسبابة يشكلان دائرة، واليد ترسم قوساً هابطاً خفيفاً لمحاكاة ذيل الواو.",
+      "orientation": "راحة اليد متجهة للداخل قليلاً.",
+      "dots": 0,
+      "media_local_path": "assets/signs/letter-waaw.png"
+    },
+    {
+      "id": "letter-yaa",
+      "letter": "ي",
+      "name_ar": "الياء",
+      "rule": "نقطتان بالأسفل (Two Dots Below)",
+      "description": "اليد تتحرك للخلف مع إصبعين (السبابة والوسطى) يشيران للأسفل كنقطتي الياء.",
+      "orientation": "الأصابع متجهة للأسفل.",
+      "dots": 2,
+      "media_local_path": "assets/signs/letter-yaa.png"
+    },
+    {
+      "id": "letter-hamza",
+      "letter": "ء",
+      "name_ar": "الهمزة",
+      "rule": "التواء خطافي صغير",
+      "description": "السبابة والإبهام بوضع مقروص مع لفة حركية حادة وصغيرة في الفراغ لمحاكاة رأس العين/الهمزة.",
+      "orientation": "أمام الصدر مباشرة.",
+      "dots": 0,
+      "media_local_path": "assets/signs/letter-hamza.png"
+    },
+    {
+      "id": "letter-taa-marbuta",
+      "letter": "ة",
+      "name_ar": "التاء المربوطة",
+      "rule": "دائرة مغلقة + نقطتان",
+      "description": "الإبهام والسبابة يشكلان دائرة مغلقة، والوسطى والبنصر يشيران للأعلى كنقطتين.",
+      "orientation": "راحة اليد موجهة للمستقبل.",
+      "dots": 2,
+      "media_local_path": "assets/signs/letter-taa-marbuta.png"
+    },
+    {
+      "id": "letter-laam-alif",
+      "letter": "لا",
+      "name_ar": "لام ألف",
+      "rule": "أذرع متقاطعة (Crossed Strokes)",
+      "description": "السبابة والوسطى تشكلان حرف V أو تتقاطعان فوق الإبهام لمحاكاة تعانق اللام والألف.",
+      "orientation": "راحة اليد موجهة للمستقبل.",
+      "dots": 0,
+      "media_local_path": "assets/signs/letter-laam-alif.png"
+    }
+  ],
+  "numbers": {
+    "rule_orientation": "راحة اليد تتجه نحو المُشير (الصدر)، وظهر اليد يواجه المتلقي.",
+    "rules": [
+      {
+        "type": "الآحاد (1-9)",
+        "mechanism": "فرد عدد الأصابع المقابل للرقم، مع توجيه راحة اليد نحو الصدر."
+      },
+      {
+        "type": "العشرات (10-90)",
+        "mechanism": "تشكيل الرقم الأساسي ثم تحريك اليد أفقياً باتجاه اليسار (The Leftward Slide)."
+      },
+      {
+        "type": "المئات (100-900)",
+        "mechanism": "تشكيل الرقم الأساسي مع حركة ارتدادية خفيفة للأعلى والأسفل (The Vertical Bounce)."
+      },
+      {
+        "type": "الآلاف (1000+)",
+        "mechanism": "تشكيل الرقم الأساسي متبوعاً برسم دوائر مغلقة (أصفار) في الهواء بأطراف الأصابع."
+      }
+    ],
+    "samples": [
+      {
+        "value": "1",
+        "name_ar": "واحد",
+        "description": "إصبع واحد للأعلى، كف اليد مواجه للصدر.",
+        "media_local_path": "assets/signs/num-1.png"
+      },
+      {
+        "value": "2",
+        "name_ar": "اثنان",
+        "description": "إصبعان للأعلى، كف اليد مواجه للصدر.",
+        "media_local_path": "assets/signs/num-2.png"
+      },
+      {
+        "value": "3",
+        "name_ar": "ثلاثة",
+        "description": "ثلاثة أصابع للأعلى، كف اليد مواجه للصدر.",
+        "media_local_path": "assets/signs/num-3.png"
+      },
+      {
+        "value": "4",
+        "name_ar": "أربعة",
+        "description": "أربعة أصابع للأعلى، كف اليد مواجه للصدر.",
+        "media_local_path": "assets/signs/num-4.png"
+      },
+      {
+        "value": "5",
+        "name_ar": "خمسة",
+        "description": "الأصابع الخمسة مفرودة، كف اليد مواجه للصدر.",
+        "media_local_path": "assets/signs/num-5.png"
+      },
+      {
+        "value": "6",
+        "name_ar": "ستة",
+        "description": "خمسة أصابع باليد الأساسية وإصبع واحد باليد الأخرى (5+1).",
+        "media_local_path": "assets/signs/num-6.png"
+      },
+      {
+        "value": "7",
+        "name_ar": "سبعة",
+        "description": "خمسة أصابع باليد الأساسية وإصبعان باليد الأخرى (5+2).",
+        "media_local_path": "assets/signs/num-7.png"
+      },
+      {
+        "value": "8",
+        "name_ar": "ثمانية",
+        "description": "خمسة أصابع باليد الأساسية وثلاثة أصابع باليد الأخرى (5+3).",
+        "media_local_path": "assets/signs/num-8.png"
+      },
+      {
+        "value": "9",
+        "name_ar": "تسعة",
+        "description": "خمسة أصابع باليد الأساسية وأربعة أصابع باليد الأخرى (5+4).",
+        "media_local_path": "assets/signs/num-9.png"
+      },
+      {
+        "value": "10",
+        "name_ar": "عشرة",
+        "description": "إصبع واحد مع سحب اليد حركة أفقية لليسار.",
+        "media_local_path": "assets/signs/num-10.png"
+      },
+      {
+        "value": "20",
+        "name_ar": "عشرون",
+        "description": "إصبعان مع سحب اليد حركة أفقية لليسار.",
+        "media_local_path": "assets/signs/num-20.png"
+      },
+      {
+        "value": "50",
+        "name_ar": "خمسون",
+        "description": "خمسة أصابع مع سحب اليد حركة أفقية لليسار.",
+        "media_local_path": "assets/signs/num-50.png"
+      },
+      {
+        "value": "100",
+        "name_ar": "مائة",
+        "description": "إصبع واحد مع ارتداد رأسي للأعلى والأسفل.",
+        "media_local_path": "assets/signs/num-100.png"
+      },
+      {
+        "value": "1000",
+        "name_ar": "ألف",
+        "description": "إصبع واحد متبوعاً بدوائر الأصفار في الهواء.",
+        "media_local_path": "assets/signs/num-1000.png"
+      }
+    ]
+  },
+  "vocabulary": [
+    {
+      "id": "ana",
+      "word_ar_eg": "أنا",
+      "category_id": "daily",
+      "phonological_description": "شكل اليد: السبابة ممتدة. الحركة: لمس الصدر بإشارة داخلية واضحة.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "ضمائر",
+        "يومي"
+      ],
+      "media_local_path": "assets/signs/sign-ana.png"
+    },
+    {
+      "id": "enta",
+      "word_ar_eg": "أنتَ / أنتِ",
+      "category_id": "daily",
+      "phonological_description": "شكل اليد: السبابة ممتدة. الحركة: الإشارة المباشرة للأمام نحو المخاطَب.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "ضمائر",
+        "يومي"
+      ],
+      "media_local_path": "assets/signs/sign-enta.png"
+    },
+    {
+      "id": "ehna",
+      "word_ar_eg": "إحنا",
+      "category_id": "daily",
+      "phonological_description": "شكل اليد: السبابة ممتدة. الحركة: مسح نصف دائري أفقي من جهة الصدر المهيمنة إلى الجهة الأخرى.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "ضمائر",
+        "يومي"
+      ],
+      "media_local_path": "assets/signs/sign-ehna.png"
+    },
+    {
+      "id": "eh",
+      "word_ar_eg": "إيه؟",
+      "category_id": "questions",
+      "phonological_description": "شكل اليد: الكف مفتوح للأعلى. الحركة: اهتزاز أفقي خفيف يمنة ويسرة مع قطب الجبين وتضييق العينين إجبارياً.",
+      "difficulty_level": 1,
+      "sign_type": "question",
+      "tags": [
+        "استفهام",
+        "تعبيرات وجه",
+        "أسئلة"
+      ],
+      "media_local_path": "assets/signs/sign-eh.png"
+    },
+    {
+      "id": "ahlan",
+      "word_ar_eg": "أهلاً",
+      "category_id": "greetings",
+      "phonological_description": "شكل اليد: كف مسطح راحة اليد لأسفل. الحركة: التحرك من الجبين للخارج في تحية خفيفة.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "تحيات"
+      ],
+      "media_local_path": "assets/signs/sign-ahlan.png"
+    },
+    {
+      "id": "shokran",
+      "word_ar_eg": "شكراً",
+      "category_id": "greetings",
+      "phonological_description": "شكل اليد: الإبهام للداخل و4 أصابع ممتدة. الحركة: تحريك اليد من الذقن والشفاه للخارج باتجاه المستقبل.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "تحيات",
+        "آداب"
+      ],
+      "media_local_path": "assets/signs/sign-shokran.png"
+    },
+    {
+      "id": "aasef",
+      "word_ar_eg": "آسف",
+      "category_id": "greetings",
+      "phonological_description": "شكل اليد: قبضة يد تستند على الصدر. الحركة: فرك في حركة دائرية فوق القلب مع تعبير وجه اعتذاري واضح.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "تحيات",
+        "آداب",
+        "مشاعر"
+      ],
+      "media_local_path": "assets/signs/sign-aasef.png"
+    },
+    {
+      "id": "men-fadlak",
+      "word_ar_eg": "من فضلك",
+      "category_id": "greetings",
+      "phonological_description": "شكل اليد: كف مفتوح مسطح. الحركة: يوضع فوق القلب ويطرق برفق مرتين متتاليتين.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "تحيات",
+        "آداب"
+      ],
+      "media_local_path": "assets/signs/sign-men-fadlak.png"
+    },
+    {
+      "id": "salam",
+      "word_ar_eg": "سلام / مع السلامة",
+      "category_id": "greetings",
+      "phonological_description": "شكل اليد: كف مفتوح. الحركة: تلويح جانبي، أو تلامس الكفين وانزلاقهما بلطف متجاوزين بعضهما.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "تحيات"
+      ],
+      "media_local_path": "assets/signs/sign-salam.png"
+    },
+    {
+      "id": "abb",
+      "word_ar_eg": "أب (بابا)",
+      "category_id": "family",
+      "phonological_description": "شكل اليد: السبابة تلمس الجبهة أو جانب الرأس، إشارة تاريخية للطربوش أو غطاء رأس الرجل.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "عائلة"
+      ],
+      "media_local_path": "assets/signs/sign-abb.png"
+    },
+    {
+      "id": "omm",
+      "word_ar_eg": "أم (ماما)",
+      "category_id": "family",
+      "phonological_description": "شكل اليد: السبابة تلمس الذقن أو أسفل الخد، دلالة تاريخية على الطرحة وتطويق الوجه.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "عائلة"
+      ],
+      "media_local_path": "assets/signs/sign-omm.png"
+    },
+    {
+      "id": "akh",
+      "word_ar_eg": "أخ",
+      "category_id": "family",
+      "phonological_description": "إشارة مركبة: إشارة مذكر (السبابة للجبهة) + وضع سبابتي اليدين متجاورتين أفقياً (التساوي والأخوة).",
+      "difficulty_level": 2,
+      "sign_type": "compound",
+      "tags": [
+        "عائلة"
+      ],
+      "media_local_path": "assets/signs/sign-akh.png"
+    },
+    {
+      "id": "okht",
+      "word_ar_eg": "أخت",
+      "category_id": "family",
+      "phonological_description": "إشارة مركبة: إشارة مؤنث (السبابة للخد/الذقن) + وضع سبابتي اليدين متجاورتين أفقياً.",
+      "difficulty_level": 2,
+      "sign_type": "compound",
+      "tags": [
+        "عائلة"
+      ],
+      "media_local_path": "assets/signs/sign-okht.png"
+    },
+    {
+      "id": "gedd",
+      "word_ar_eg": "جد",
+      "category_id": "family",
+      "phonological_description": "شكل اليد: حرف C. الحركة: تبدأ عند الذقن وتسحب للأسفل باتجاه الصدر لمحاكاة اللحية البيضاء الوقورة.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "عائلة"
+      ],
+      "media_local_path": "assets/signs/sign-gedd.png"
+    },
+    {
+      "id": "yakol",
+      "word_ar_eg": "ياكل",
+      "category_id": "food",
+      "phonological_description": "شكل اليد: أطراف الأصابع مجتمعة ملامسة للإبهام. الحركة: نقر الشفاه مرتين بخفة.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "طعام",
+        "أفعال"
+      ],
+      "media_local_path": "assets/signs/sign-yakol.png"
+    },
+    {
+      "id": "yashrab",
+      "word_ar_eg": "يشرب",
+      "category_id": "food",
+      "phonological_description": "شكل اليد: حرف C يمسك كوباً خيالياً. الحركة: إمالة الكف المضموم نحو الفم للشرب.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "طعام",
+        "أفعال"
+      ],
+      "media_local_path": "assets/signs/sign-yashrab.png"
+    },
+    {
+      "id": "mayya",
+      "word_ar_eg": "مياه",
+      "category_id": "food",
+      "phonological_description": "شكل اليد: السبابة تنقر الذقن أو الحنجرة، أو محاكاة حركة الشرب مع تحريك الشفاه بكلمة 'ماء'.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "طعام"
+      ],
+      "media_local_path": "assets/signs/sign-mayya.png"
+    },
+    {
+      "id": "eish",
+      "word_ar_eg": "عيش (خبز)",
+      "category_id": "food",
+      "phonological_description": "شكل اليد: اليدان مفرودتان لأسفل. الحركة: التربيت بالتبادل صعوداً وهبوطاً لمحاكاة فرد العجين المصري.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "طعام",
+        "ثقافة"
+      ],
+      "media_local_path": "assets/signs/sign-eish.png"
+    },
+    {
+      "id": "shai",
+      "word_ar_eg": "شاي",
+      "category_id": "food",
+      "phonological_description": "شكل اليد: قرص الإبهام والسبابة لمسك فتلة الشاي. الحركة: غمس الكيس صعوداً وهبوطاً في الكوب.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "طعام",
+        "ثقافة"
+      ],
+      "media_local_path": "assets/signs/sign-shai.png"
+    },
+    {
+      "id": "beit",
+      "word_ar_eg": "بيت",
+      "category_id": "home",
+      "phonological_description": "شكل اليد: الكفان مستقيمان. الحركة: تلتقي أطراف الأصابع بزاوية لتشكيل سقف المنزل المثلث.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "منزل"
+      ],
+      "media_local_path": "assets/signs/sign-beit.png"
+    },
+    {
+      "id": "baab",
+      "word_ar_eg": "باب",
+      "category_id": "home",
+      "phonological_description": "شكل اليد: الكفان مستقيمان للأمام وحوافهما متلامسة. الحركة: تنفتح إحدى اليدين للخلف كمفصلة الباب.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "منزل"
+      ],
+      "media_local_path": "assets/signs/sign-baab.png"
+    },
+    {
+      "id": "sareer",
+      "word_ar_eg": "سرير",
+      "category_id": "home",
+      "phonological_description": "شكل اليد: كفان مسطحان متلاصقان. الحركة: يوضعان بجانب الرأس المائل في وضع النوم المريح.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "منزل"
+      ],
+      "media_local_path": "assets/signs/sign-sareer.png"
+    },
+    {
+      "id": "madrasa",
+      "word_ar_eg": "مدرسة",
+      "category_id": "school",
+      "phonological_description": "شكل اليد: كفان مسطحان مفتوحان. الحركة: التصفيق أفقياً مرتين متتاليتين.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "تعليم"
+      ],
+      "media_local_path": "assets/signs/sign-madrasa.png"
+    },
+    {
+      "id": "ketaab",
+      "word_ar_eg": "كتاب",
+      "category_id": "school",
+      "phonological_description": "شكل اليد: كفان مسطحان متلاصقان. الحركة: فتحهما عند الإبهامين كمطالعة صفحات كتاب حقيقي.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "تعليم"
+      ],
+      "media_local_path": "assets/signs/sign-ketaab.png"
+    },
+    {
+      "id": "qalam",
+      "word_ar_eg": "قلم",
+      "category_id": "school",
+      "phonological_description": "شكل اليد: الإبهام والسبابة بوضع مسك القلم. الحركة: الكتابة في الهواء أو فوق كف اليد غير المهيمنة.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "تعليم"
+      ],
+      "media_local_path": "assets/signs/sign-qalam.png"
+    },
+    {
+      "id": "mabsoot",
+      "word_ar_eg": "مبسوط / فرحان",
+      "category_id": "emotions",
+      "phonological_description": "شكل اليد: كفان مسطحان يواجهان الصدر. الحركة: مسح تصاعدي للصدر مع ابتسامة عريضة إجبارية.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "مشاعر",
+        "تعبيرات وجه"
+      ],
+      "media_local_path": "assets/signs/sign-mabsoot.png"
+    },
+    {
+      "id": "hazeen",
+      "word_ar_eg": "زعلان / حزين",
+      "category_id": "emotions",
+      "phonological_description": "شكل اليد: السبابتان. الحركة: تتبع مسار دموع خيالية هابطة على الوجنتين مع تعبير وجه حزين مقلوب الشفاه.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "مشاعر",
+        "تعبيرات وجه"
+      ],
+      "media_local_path": "assets/signs/sign-hazeen.png"
+    },
+    {
+      "id": "baheb",
+      "word_ar_eg": "بحب",
+      "category_id": "emotions",
+      "phonological_description": "شكل اليد: الكفان مسطحان أو قبضتان هادئتان. الحركة: وضع الذراعين متقاطعين فوق منطقة القلب بحميمية.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "مشاعر"
+      ],
+      "media_local_path": "assets/signs/sign-baheb.png"
+    },
+    {
+      "id": "ghadbaan",
+      "word_ar_eg": "غضبان",
+      "category_id": "emotions",
+      "phonological_description": "شكل اليد: أيدي مخلبية كالمخالب. الحركة: سحب حاد وسريع للأعلى أمام الصدر مع زم الحاجبين وتحديق غاضب.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "مشاعر",
+        "تعبيرات وجه"
+      ],
+      "media_local_path": "assets/signs/sign-ghadbaan.png"
+    },
+    {
+      "id": "qotta",
+      "word_ar_eg": "قطة",
+      "category_id": "animals",
+      "phonological_description": "شكل اليد: الإبهام والسبابة مقروصان (حرف F). الحركة: توضع عند الخدين وتسحب للخارج محاكية شوارب القطة.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "حيوانات"
+      ],
+      "media_local_path": "assets/signs/sign-qotta.png"
+    },
+    {
+      "id": "kalb",
+      "word_ar_eg": "كلب",
+      "category_id": "animals",
+      "phonological_description": "شكل اليد: كف مسطح. الحركة: التربيت على جانب الفخذ مرتين متتاليتين في نداء تقليدي للكلب.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "حيوانات"
+      ],
+      "media_local_path": "assets/signs/sign-kalb.png"
+    },
+    {
+      "id": "asfoora",
+      "word_ar_eg": "عصفورة",
+      "category_id": "animals",
+      "phonological_description": "شكل اليد: الإبهام والسبابة عند الفم. الحركة: الفتح والإغلاق المتكرر لمحاكاة منقار العصفور أثناء التغريد.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "حيوانات"
+      ],
+      "media_local_path": "assets/signs/sign-asfoora.png"
+    },
+    {
+      "id": "elyoum",
+      "word_ar_eg": "اليوم / النهاردة",
+      "category_id": "time",
+      "phonological_description": "شكل اليد: اليدان مسطحتان والكفان للأعلى. الحركة: الهبوط الخفيف معاً أمام الصدر في إشارة للحاضر الماثل.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "زمن"
+      ],
+      "media_local_path": "assets/signs/sign-elyoum.png"
+    },
+    {
+      "id": "bokra",
+      "word_ar_eg": "بكرة",
+      "category_id": "time",
+      "phonological_description": "شكل اليد: السبابة تشير للأمام. الحركة: تنطلق للأمام انطلاقاً من جانب الخد نحو فضاء المستقبل المفتوح.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "زمن"
+      ],
+      "media_local_path": "assets/signs/sign-bokra.png"
+    },
+    {
+      "id": "embareh",
+      "word_ar_eg": "إمبارح",
+      "category_id": "time",
+      "phonological_description": "شكل اليد: الإبهام يشير للخلف. الحركة: تتجه اليد إلى الخلف فوق الكتف نحو فضاء الماضي المنصرم.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "زمن"
+      ],
+      "media_local_path": "assets/signs/sign-embareh.png"
+    },
+    {
+      "id": "ahmar",
+      "word_ar_eg": "أحمر",
+      "category_id": "colors",
+      "phonological_description": "شكل اليد: السبابة ممتدة. الحركة: تلمس الشفة السفلى وتسحب للأسفل بخفة دلالة على حمرة الشفاه.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "ألوان",
+        "يومي"
+      ],
+      "media_local_path": "assets/signs/sign-ahmar.png"
+    },
+    {
+      "id": "azraq",
+      "word_ar_eg": "أزرق",
+      "category_id": "colors",
+      "phonological_description": "شكل اليد: اليد تشكل حرف C مقلوباً. الحركة: تموج أفقي متصل لمحاكاة زرقة ماء النيل والبحر.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "ألوان",
+        "طبيعة"
+      ],
+      "media_local_path": "assets/signs/sign-azraq.png"
+    },
+    {
+      "id": "asfar",
+      "word_ar_eg": "أصفر",
+      "category_id": "colors",
+      "phonological_description": "شكل اليد: السبابة والوسطى ممتدتان. الحركة: تنقران جانب الوجنة برفق في إشارة لاصفرار الوجه والليمون.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "ألوان"
+      ],
+      "media_local_path": "assets/signs/sign-asfar.png"
+    },
+    {
+      "id": "akhdar",
+      "word_ar_eg": "أخضر",
+      "category_id": "colors",
+      "phonological_description": "شكل اليد: الكف مفتوح للأعلى. الحركة: الارتفاع الرأسي التدريجي لمحاكاة نماء الزرع والنباتات الخضراء.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "ألوان",
+        "طبيعة"
+      ],
+      "media_local_path": "assets/signs/sign-akhdar.png"
+    },
+    {
+      "id": "abyad",
+      "word_ar_eg": "أبيض",
+      "category_id": "colors",
+      "phonological_description": "شكل اليد: كف مسطح مفرود. الحركة: المسح الصاعد المائل فوق الصدر أو مقدمة الأسنان دلالة على البياض والنقاء.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "ألوان"
+      ],
+      "media_local_path": "assets/signs/sign-abyad.png"
+    },
+    {
+      "id": "aswad",
+      "word_ar_eg": "أسود",
+      "category_id": "colors",
+      "phonological_description": "شكل اليد: السبابة ممتدة. الحركة: تتبع خط الحاجب أو منبت الشعر الأسود بحركة أفقية مقوسة.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "ألوان"
+      ],
+      "media_local_path": "assets/signs/sign-aswad.png"
+    },
+    {
+      "id": "doctor",
+      "word_ar_eg": "دكتور / طبيب",
+      "category_id": "health",
+      "phonological_description": "شكل اليد: سبابة ووسطى اليد المهيمنة. الحركة: جَس نبض معصم اليد الأخرى في محاكاة الفحص الطبي.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "صحة",
+        "مهن"
+      ],
+      "media_local_path": "assets/signs/sign-doctor.png"
+    },
+    {
+      "id": "mostashfa",
+      "word_ar_eg": "مستشفى",
+      "category_id": "health",
+      "phonological_description": "شكل اليد: السبابة ترسم علامة زائد (+) أو إشارة الصليب/الهلال في الفضاء الإشاري أو على الذراع.",
+      "difficulty_level": 2,
+      "sign_type": "compound",
+      "tags": [
+        "صحة",
+        "أماكن"
+      ],
+      "media_local_path": "assets/signs/sign-mostashfa.png"
+    },
+    {
+      "id": "taaban",
+      "word_ar_eg": "تعبان / مريض",
+      "category_id": "health",
+      "phonological_description": "شكل اليد: الكف يسترخي ويهبط للأسفل أمام الصدر مع إمالة الرأس وملامح وجه مجهدة.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "صحة",
+        "مشاعر"
+      ],
+      "media_local_path": "assets/signs/sign-taaban.png"
+    },
+    {
+      "id": "wagaa",
+      "word_ar_eg": "وجع / ألم",
+      "category_id": "health",
+      "phonological_description": "شكل اليد: سبابتان أو قبضتان متقاربتان. الحركة: الارتعاش التناوبي السريع قرب موضع الألم مع تعبير تألم إجباري.",
+      "difficulty_level": 2,
+      "sign_type": "lexical",
+      "tags": [
+        "صحة",
+        "تعبيرات وجه"
+      ],
+      "media_local_path": "assets/signs/sign-wagaa.png"
+    },
+    {
+      "id": "dawa",
+      "word_ar_eg": "دوا (دواء)",
+      "category_id": "health",
+      "phonological_description": "شكل اليد: الإبهام والسبابة مقروصان لمسك حبة دواء. الحركة: تقريب اليد نحو الفم المفتوح مع حركة بلع خفيفة.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "صحة"
+      ],
+      "media_local_path": "assets/signs/sign-dawa.png"
+    },
+    {
+      "id": "esaaf",
+      "word_ar_eg": "إسعاف",
+      "category_id": "health",
+      "phonological_description": "شكل اليد: كف مفتوح فوق الرأس. الحركة: الدوران الدائري السريع لمحاكاة صفارة الإسعاف الضوئية المتحركة.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "صحة",
+        "طوارئ"
+      ],
+      "media_local_path": "assets/signs/sign-esaaf.png"
+    },
+    {
+      "id": "qamees",
+      "word_ar_eg": "قميص",
+      "category_id": "clothes",
+      "phonological_description": "شكل اليد: الإبهام والسبابة في كلتا اليدين. الحركة: مسك ياقة القميص أو موضع الأزرار والسحب برفق للخارج.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "ملابس"
+      ],
+      "media_local_path": "assets/signs/sign-qamees.png"
+    },
+    {
+      "id": "bantalon",
+      "word_ar_eg": "بنطلون",
+      "category_id": "clothes",
+      "phonological_description": "شكل اليد: الكفان مفرودان يواجهان الساقين. الحركة: الانزلاق الرأسي من الخصر إلى منتصف الفخذين بمحاذاة البنطال.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "ملابس"
+      ],
+      "media_local_path": "assets/signs/sign-bantalon.png"
+    },
+    {
+      "id": "fostan",
+      "word_ar_eg": "فستان",
+      "category_id": "clothes",
+      "phonological_description": "شكل اليد: الكفان مفرودان يبدآن من الخصر. الحركة: الانفراج المائل للأسفل لتجسيد وسع الفستان المتدلي.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "ملابس"
+      ],
+      "media_local_path": "assets/signs/sign-fostan.png"
+    },
+    {
+      "id": "tarha",
+      "word_ar_eg": "طرحة / حجاب",
+      "category_id": "clothes",
+      "phonological_description": "شكل اليد: الكفان مسطحان يحيطان بجانبي الرأس. الحركة: النزول المقوس نحو أسفل الذقن لمحاكاة لف الطرحة المصرية.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "ملابس",
+        "ثقافة"
+      ],
+      "media_local_path": "assets/signs/sign-tarha.png"
+    },
+    {
+      "id": "saaa",
+      "word_ar_eg": "ساعة يد",
+      "category_id": "clothes",
+      "phonological_description": "شكل اليد: السبابة ممتدة. الحركة: النقر مرتين متتاليتين على ظهر معصم اليد الأخرى في موضع الساعة.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "ملابس",
+        "زمن"
+      ],
+      "media_local_path": "assets/signs/sign-saaa.png"
+    },
+    {
+      "id": "aamel-eh",
+      "word_ar_eg": "عامل إيه؟ / إزيك؟",
+      "category_id": "expressions",
+      "phonological_description": "شكل اليد: الكفان مفتوحان للأعلى. الحركة: اهتزاز أفقي لطيف للأمام والخلف مع رفع الحاجبين وابتسامة ترحيب.",
+      "difficulty_level": 1,
+      "sign_type": "question",
+      "tags": [
+        "عبارات",
+        "تحيات",
+        "تعبيرات وجه"
+      ],
+      "media_local_path": "assets/signs/sign-aamel-eh.png"
+    },
+    {
+      "id": "tamam",
+      "word_ar_eg": "تمام / كويس / كله بخير",
+      "category_id": "expressions",
+      "phonological_description": "شكل اليد: قبضة يد مع فرد الإبهام للأعلى باستقامة. الحركة: رفعة توكيدية واثقة للأعلى مع إيماءة رأس بالموافقة.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "عبارات",
+        "تأكيد"
+      ],
+      "media_local_path": "assets/signs/sign-tamam.png"
+    },
+    {
+      "id": "alhamdulillah",
+      "word_ar_eg": "الحمد لله",
+      "category_id": "expressions",
+      "phonological_description": "شكل اليد: كف مسطح خاشع. الحركة: يلمس الجبهة ثم ينزل ليستقر فوق القلب تعبيراً عن الشكر والرضا العميق.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "عبارات",
+        "ثقافة"
+      ],
+      "media_local_path": "assets/signs/sign-alhamdulillah.png"
+    },
+    {
+      "id": "mesh-faahem",
+      "word_ar_eg": "مش فاهم / مافهمتش",
+      "category_id": "expressions",
+      "phonological_description": "شكل اليد: السبابة تلمس الصدغ ثم تنفض للخارج في حركة نفي مع هزة رأس جانبية ونظرة استفسار.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "عبارات",
+        "تواصل"
+      ],
+      "media_local_path": "assets/signs/sign-mesh-faahem.png"
+    },
+    {
+      "id": "wahda-wahda",
+      "word_ar_eg": "واحدة واحدة / براحة",
+      "category_id": "expressions",
+      "phonological_description": "شكل اليد: السبابة ممتدة للأمام لأسفل. الحركة: نبضتان متتاليتان هادئتان للأسفل تدعوان للتمهل والتريث.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "عبارات",
+        "تواصل"
+      ],
+      "media_local_path": "assets/signs/sign-wahda-wahda.png"
+    },
+    {
+      "id": "feen",
+      "word_ar_eg": "أين / فين؟",
+      "category_id": "questions",
+      "phonological_description": "شكل اليد: اليدان مفتوحتان والراحتان للأعلى. الحركة: تأرجح طفيف ومتكرر للراحتين يميناً ويساراً مع رفع الحاجبين واستفسار الوجه الأصيل في لغة الإشارة المصرية.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "أسئلة",
+        "يومي",
+        "حوار"
+      ],
+      "media_local_path": "assets/signs/sign-feen.png"
+    },
+    {
+      "id": "emta",
+      "word_ar_eg": "متى / إمتى؟",
+      "category_id": "questions",
+      "phonological_description": "شكل اليد: السبابة تشير وتدور بحركة دائرية صغيرة عند المعصم. الحركة: إشارة دائرية سريعة نحو موضع الساعة تعبيراً عن التوقيت.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "أسئلة",
+        "وقت",
+        "يومي"
+      ],
+      "media_local_path": "assets/signs/sign-emta.png"
+    },
+    {
+      "id": "leh",
+      "word_ar_eg": "لماذا / ليه؟",
+      "category_id": "questions",
+      "phonological_description": "شكل اليد: راحة اليد متجهة نحو الصدر ثم تفتح للأمام بحركة مفاجئة مع ضم الحاجبين وتعبير استفسار تعجبي.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "أسئلة",
+        "حوار",
+        "يومي"
+      ],
+      "media_local_path": "assets/signs/sign-leh.png"
+    },
+    {
+      "id": "meen",
+      "word_ar_eg": "من / مين؟",
+      "category_id": "questions",
+      "phonological_description": "شكل اليد: السبابة تهتز بحركة دائرية صغيرة بجانب الفم أو الصدغ مع زم الشفاه واستفسار بصري.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "أسئلة",
+        "أشخاص"
+      ],
+      "media_local_path": "assets/signs/sign-meen.png"
+    },
+    {
+      "id": "kam",
+      "word_ar_eg": "كم / كام؟",
+      "category_id": "questions",
+      "phonological_description": "شكل اليد: أصابع اليدين تنفتح متتابعة للأعلى مثل العد السريع مع تقطيب الجبين.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "أسئلة",
+        "أرقام",
+        "كمية"
+      ],
+      "media_local_path": "assets/signs/sign-kam.png"
+    },
+    {
+      "id": "aiwa",
+      "word_ar_eg": "أيوة / نعم",
+      "category_id": "questions",
+      "phonological_description": "شكل اليد: قبضة اليد مضمومة وتهتز للأعلى والأسفل بحركة إيمائية مثل إيماءة الرأس الدالة على الموافقة التامة.",
+      "difficulty_level": 1,
+      "sign_type": "iconic",
+      "tags": [
+        "إجابات",
+        "تأكيد",
+        "يومي"
+      ],
+      "media_local_path": "assets/signs/sign-aiwa.png"
+    },
+    {
+      "id": "laa",
+      "word_ar_eg": "لا / رفض",
+      "category_id": "questions",
+      "phonological_description": "شكل اليد: السبابة ممتدة رأسياً وتتحرك يميناً ويساراً بحزم مع هز الرأس نفياً.",
+      "difficulty_level": 1,
+      "sign_type": "iconic",
+      "tags": [
+        "إجابات",
+        "نفي",
+        "يومي"
+      ],
+      "media_local_path": "assets/signs/sign-laa.png"
+    },
+    {
+      "id": "qahwa",
+      "word_ar_eg": "قهوة",
+      "category_id": "food",
+      "phonological_description": "شكل اليد: قبضة يد فوق قبضة يد أخرى تدور بحركة طحن البن التقليدية مع ارتشاف الفنجان بحركة الأصابع.",
+      "difficulty_level": 1,
+      "sign_type": "iconic",
+      "tags": [
+        "مشروبات",
+        "مطبخ",
+        "يومي"
+      ],
+      "media_local_path": "assets/signs/sign-qahwa.png"
+    },
+    {
+      "id": "laban",
+      "word_ar_eg": "لبن / حليب",
+      "category_id": "food",
+      "phonological_description": "شكل اليد: قبضة يد تفتح وتغلق بحركة هابطة مرتين لمحاكاة حلب الحليب الصافي.",
+      "difficulty_level": 1,
+      "sign_type": "iconic",
+      "tags": [
+        "مشروبات",
+        "طعام",
+        "صحة"
+      ],
+      "media_local_path": "assets/signs/sign-laban.png"
+    },
+    {
+      "id": "sukkar",
+      "word_ar_eg": "سكر",
+      "category_id": "food",
+      "phonological_description": "شكل اليد: أطراف أصابع السبابة والوسطى تفرك جانبي الذقن أو زاوية الفم إشارة إلى الحلاوة والتحلية.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "طعام",
+        "مطبخ",
+        "مذاق"
+      ],
+      "media_local_path": "assets/signs/sign-sukkar.png"
+    },
+    {
+      "id": "mattebakh",
+      "word_ar_eg": "مطبخ",
+      "category_id": "food",
+      "phonological_description": "شكل اليد: راحة يد مسطحة تمثل المقلاة واليد الأخرى تقلب محتويات الطعام بحركة دائرية نشطة.",
+      "difficulty_level": 2,
+      "sign_type": "compound",
+      "tags": [
+        "بيت",
+        "مطبخ",
+        "طعام"
+      ],
+      "media_local_path": "assets/signs/sign-mattebakh.png"
+    },
+    {
+      "id": "malh",
+      "word_ar_eg": "ملح",
+      "category_id": "food",
+      "phonological_description": "شكل اليد: أطراف الإبهام والسبابة والوسطى تفرك معاً فوق راحة اليد بحركة رش ذرات الملح.",
+      "difficulty_level": 1,
+      "sign_type": "iconic",
+      "tags": [
+        "طعام",
+        "مطبخ",
+        "توابل"
+      ],
+      "media_local_path": "assets/signs/sign-malh.png"
+    },
+    {
+      "id": "gadda",
+      "word_ar_eg": "جدة",
+      "category_id": "family",
+      "phonological_description": "شكل اليد: اليد تشير للذقن (علامة الأنوثة) ثم ترسم حركة حنونة مقوسة للأمام للدلالة على الجيل الأكبر سناً.",
+      "difficulty_level": 1,
+      "sign_type": "compound",
+      "tags": [
+        "عائلة",
+        "أقارب",
+        "احترام"
+      ],
+      "media_local_path": "assets/signs/sign-gadda.png"
+    },
+    {
+      "id": "walad",
+      "word_ar_eg": "ولد / ابن",
+      "category_id": "family",
+      "phonological_description": "شكل اليد: اليد ممتدة عند الجبين بحركة أفقية ترمز لحافة غطاء الرأس ثم تنزل لتحديد قامة الصبي.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "عائلة",
+        "أشخاص"
+      ],
+      "media_local_path": "assets/signs/sign-walad.png"
+    },
+    {
+      "id": "bent",
+      "word_ar_eg": "بنت / ابنة",
+      "category_id": "family",
+      "phonological_description": "شكل اليد: الإبهام يمر على جانب الخد بنعومة من الأذن إلى زاوية الشفاه (علامة الحلي/القرط) دلالة على الفتاة.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "عائلة",
+        "أشخاص"
+      ],
+      "media_local_path": "assets/signs/sign-bent.png"
+    },
+    {
+      "id": "tifl",
+      "word_ar_eg": "طفل / رضيع",
+      "category_id": "family",
+      "phonological_description": "شكل اليد: الذراعان مثنيتان تضم هدهدة رضيع وتحريكه برقة بين اليدين.",
+      "difficulty_level": 1,
+      "sign_type": "iconic",
+      "tags": [
+        "عائلة",
+        "طفولة"
+      ],
+      "media_local_path": "assets/signs/sign-tifl.png"
+    },
+    {
+      "id": "aela",
+      "word_ar_eg": "عائلة / أسرة",
+      "category_id": "family",
+      "phonological_description": "شكل اليد: اليدان تشكلان دائرة متصلة تبدأ من الإبهامين وتنتهي بالخنصرين، دلالة على تماسك الأسرة والبيت الواحد.",
+      "difficulty_level": 2,
+      "sign_type": "iconic",
+      "tags": [
+        "عائلة",
+        "مجتمع",
+        "رابطة"
+      ],
+      "media_local_path": "assets/signs/sign-aela.png"
+    },
+    {
+      "id": "kursi",
+      "word_ar_eg": "كرسي / جلوس",
+      "category_id": "home",
+      "phonological_description": "شكل اليد: إصبعان مثنيان من اليد اليمنى يستقران فوق إصبعين مثنيين من اليد اليسرى بحركة جلوس ثابتة.",
+      "difficulty_level": 1,
+      "sign_type": "iconic",
+      "tags": [
+        "بيت",
+        "أثاث"
+      ],
+      "media_local_path": "assets/signs/sign-kursi.png"
+    },
+    {
+      "id": "hammam",
+      "word_ar_eg": "حمام / دورة مياه",
+      "category_id": "home",
+      "phonological_description": "شكل اليد: اليد تشكل حرف الحاء أو قبضة مغلقة تنقر نقراً خفيفاً مرتين على الباب.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "بيت",
+        "مرافق"
+      ],
+      "media_local_path": "assets/signs/sign-hammam.png"
+    },
+    {
+      "id": "shobbak",
+      "word_ar_eg": "شباك / نافذة",
+      "category_id": "home",
+      "phonological_description": "شكل اليد: الساعدان متوازيان ومفصولان، يرتفع الساعد العلوي للأعلى والآخر للأسفل لمحاكاة فتح نافذة منزلقة.",
+      "difficulty_level": 1,
+      "sign_type": "iconic",
+      "tags": [
+        "بيت",
+        "مبنى"
+      ],
+      "media_local_path": "assets/signs/sign-shobbak.png"
+    },
+    {
+      "id": "moallem",
+      "word_ar_eg": "معلم / مدرس",
+      "category_id": "school",
+      "phonological_description": "شكل اليد: قبضتا اليدين عند الصدغين تمتدان للأمام وتفتحان الأصابع دلالة على نقل المعرفة والعلم للطلاب.",
+      "difficulty_level": 2,
+      "sign_type": "lexical",
+      "tags": [
+        "تعليم",
+        "مهن",
+        "مدرسة"
+      ],
+      "media_local_path": "assets/signs/sign-moallem.png"
+    },
+    {
+      "id": "waagib",
+      "word_ar_eg": "واجب مدرسي",
+      "category_id": "school",
+      "phonological_description": "شكل اليد: حركة كتابة بالسبابة على راحة اليد اليسرى تليها إشارة الالتزام بوضع قبضة اليد على الصدر.",
+      "difficulty_level": 2,
+      "sign_type": "compound",
+      "tags": [
+        "تعليم",
+        "دراسة",
+        "مدرسة"
+      ],
+      "media_local_path": "assets/signs/sign-waagib.png"
+    },
+    {
+      "id": "fasl",
+      "word_ar_eg": "فصل دراسي / قاعة",
+      "category_id": "school",
+      "phonological_description": "شكل اليد: اليدان مفتوحتان ترسمان حدود غرفة مربعة متناسقة تبدأ من الأمام وتنغلق للخلف.",
+      "difficulty_level": 1,
+      "sign_type": "iconic",
+      "tags": [
+        "تعليم",
+        "مدرسة",
+        "مكان"
+      ],
+      "media_local_path": "assets/signs/sign-fasl.png"
+    },
+    {
+      "id": "samaka",
+      "word_ar_eg": "سمكة",
+      "category_id": "animals",
+      "phonological_description": "شكل اليد: راحة اليد ممتدة رأسياً وأفقياً تتحرك بتموج سلس لمحاكاة سباحة سمكة النيل في الماء.",
+      "difficulty_level": 1,
+      "sign_type": "iconic",
+      "tags": [
+        "حيوانات",
+        "طبيعة",
+        "بحر"
+      ],
+      "media_local_path": "assets/signs/sign-samaka.png"
+    },
+    {
+      "id": "hosaan",
+      "word_ar_eg": "حصان",
+      "category_id": "animals",
+      "phonological_description": "شكل اليد: إصبعان ممتدان عند الصدغ (شكل حرف H) ينثنيان مرتين لمحاكاة حركة أذني الحصان المتيقظتين.",
+      "difficulty_level": 1,
+      "sign_type": "iconic",
+      "tags": [
+        "حيوانات",
+        "طبيعة"
+      ],
+      "media_local_path": "assets/signs/sign-hosaan.png"
+    },
+    {
+      "id": "asad",
+      "word_ar_eg": "أسد",
+      "category_id": "animals",
+      "phonological_description": "شكل اليد: كف اليد مخلبية ومتقوسة تمسح للخلف حول الرأس لتحديد لبدة الأسد المهيبة مع تعبير وجه قوي.",
+      "difficulty_level": 2,
+      "sign_type": "iconic",
+      "tags": [
+        "حيوانات",
+        "قوة",
+        "برية"
+      ],
+      "media_local_path": "assets/signs/sign-asad.png"
+    },
+    {
+      "id": "osboua",
+      "word_ar_eg": "أسبوع",
+      "category_id": "time",
+      "phonological_description": "شكل اليد: سبابة اليد اليمنى تنزلق من قاعدة راحة اليد اليسرى حتى أطراف الأصابع بخط مستقيم يمثل مسار أيام الأسبوع السبعة.",
+      "difficulty_level": 1,
+      "sign_type": "lexical",
+      "tags": [
+        "وقت",
+        "تقويم",
+        "يومي"
+      ],
+      "media_local_path": "assets/signs/sign-osboua.png"
+    },
+    {
+      "id": "shahr",
+      "word_ar_eg": "شهر",
+      "category_id": "time",
+      "phonological_description": "شكل اليد: سبابة اليد اليمنى تنزلق للأسفل على ظهر سبابة اليد اليسرى القائمة رأسياً دلالة على انقضاء شهر في التقويم.",
+      "difficulty_level": 2,
+      "sign_type": "lexical",
+      "tags": [
+        "وقت",
+        "تقويم"
+      ],
+      "media_local_path": "assets/signs/sign-shahr.png"
+    },
+    {
+      "id": "sana",
+      "word_ar_eg": "سنة / عام",
+      "category_id": "time",
+      "phonological_description": "شكل اليد: القبضتان مضمومتان وتدور إحداهما حول الأخرى في مدار دائري كامل حتى تستقر فوقها، تمثيلاً لدورة فلكية كاملة للأرض حول الشمس.",
+      "difficulty_level": 2,
+      "sign_type": "iconic",
+      "tags": [
+        "وقت",
+        "تقويم",
+        "مستقبل"
+      ],
+      "media_local_path": "assets/signs/sign-sana.png"
+    },
+    {
+      "id": "sabah-el-kheir",
+      "word_ar_eg": "صباح الخير",
+      "category_id": "greetings",
+      "phonological_description": "شكل اليد: إشارة الصباح (اليد تشرق من تحت الساعد للأعلى كالشمس) متبوعة بلمسة الذقن أو راحة اليد دلالة على الخير واليمن.",
+      "difficulty_level": 1,
+      "sign_type": "compound",
+      "tags": [
+        "تحيات",
+        "يومي",
+        "أدب"
+      ],
+      "media_local_path": "assets/signs/sign-sabah-el-kheir.png"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "topic-comment",
+      "title_ar": "بناء الجملة: المبتدأ والخبر والخط الزمني",
+      "summary": "لغة الإشارة المصرية تتبع ترتيب: الزمان - الفاعل - المفعول - الفعل (Time - Subject - Object - Verb).",
+      "example_spoken": "ذهبتُ إلى المدرسة أمس",
+      "example_esl": "أمس - أنا - مدرسة - يذهب",
+      "explanation": "في لغة الإشارة يُحدد الإطار الزمني والموضوع أولاً في الفضاء الإشاري، ثم تأتي التفاصيل وحركة الفعل في النهاية."
+    },
+    {
+      "id": "omission-copula",
+      "title_ar": "حذف فعل الكينونة (Verb to be)",
+      "summary": "لا توجد في لغة الإشارة المصرية إشارة لفعل الكينونة (أكون، يكون، نكون).",
+      "example_spoken": "أنا أكون مصرياً",
+      "example_esl": "أنا - مصري",
+      "explanation": "الوصل الدلالي بين الفاعل وصفته أو هويته يتم مباشرة وموجهاً دون حشو لفظي."
+    },
+    {
+      "id": "non-manual-markers",
+      "title_ar": "علامات الوجه غير اليدوية (Non-Manual Markers)",
+      "summary": "تعبيرات الوجه في لغة الإشارة المصرية هي نحو وقواعد وترقيم وليست مجرد انفعال.",
+      "rules": [
+        {
+          "context": "أسئلة نعم/لا (Yes/No Questions)",
+          "facial": "رفع الحاجبين مع ميلان طفيف للرأس للأمام."
+        },
+        {
+          "context": "أسئلة الاستفهام (مين؟ فين؟ إيه؟)",
+          "facial": "قطب الجبين (ضم الحاجبين) وتضييق حدقة العينين."
+        },
+        {
+          "context": "الصفات والتضخيم (كبير جداً)",
+          "facial": "نفخ الخدين للتعبير عن الضخامة، أو تضييق العينين للتدقيق والشيء الضئيل."
+        }
+      ]
+    }
+  ],
+  "culture": [
+    {
+      "id": "getting-attention",
+      "title_ar": "لفت الانتباه باحترام",
+      "rule": "التربيت الخفيف على الكتف، أو التلويح في مجال الرؤية، أو وميض زر النور في القاعات الكبيرة.",
+      "caution": "ممنوع قطعاً إلقاء الأشياء أو ركل الأرض بعنف للفت الانتباه."
+    },
+    {
+      "id": "eye-contact",
+      "title_ar": "التواصل البصري المستمر",
+      "rule": "الحفاظ على اتصال العينين طوال المحادثة أمر محوري.",
+      "caution": "النظر بعيداً أثناء الحديث يُعد في ثقافة الصم إهانة أو إعلاناً بإنهاء الاستماع."
+    },
+    {
+      "id": "clear-space",
+      "title_ar": "وضوح الفضاء الإشاري والوجه",
+      "rule": "التأكد من أن حركة اليدين وتعبيرات الفم والوجه مرئية بوضوح وإضاءة جيدة.",
+      "caution": "تجنب تغطية الفم، أو الإشارة أثناء تناول الطعام."
+    },
+    {
+      "id": "speak-normally",
+      "title_ar": "التحدث بالسرعة الطبيعية",
+      "rule": "تكلم بنبرة وصوت طبيعي في حال تحدثت بالتزامن مع الإشارة دون مبالغة.",
+      "caution": "الصراخ أو المبالغة الشديدة في حركة الشفاه يشوه ملامح الوجه ويعيق قراءة الشفاه تماماً."
+    }
+  ]
+}

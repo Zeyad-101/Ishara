@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ثقافة الصم وآداب التعامل — إشارة (ESL Etiquette)</title>
+  <meta name="description" content="إرشادات وآداب التعامل والتواصل المحترم مع مجتمع الصم وضعاف السمع في مصر: لفت الانتباه، التواصل البصري، وقواعد التفاعل.">
+  <meta property="og:title" content="ثقافة الصم وآداب التعامل — إشارة (ESL Etiquette)">
+  <meta property="og:description" content="إرشادات وآداب التعامل والتواصل المحترم مع مجتمع الصم وضعاف السمع في مصر: لفت الانتباه، التواصل البصري، وقواعد التفاعل.">
+  <meta property="og:image" content="./assets/images/culture_banner.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16.png">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="apple-touch-icon" sizes="192x192" href="./assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="./css/main.css">
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body data-page="culture">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand">
+        <img src="./assets/images/logo.png" alt="شعار منصة إشارة" class="brand-logo" width="48" height="48">
+        <div class="brand-text">
+          <span class="brand-title">إشارة</span>
+          <span class="brand-sub">تعلم لغة الإشارة المصرية</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop" aria-label="التنقل الرئيسي">
+        <a href="index.html" class="nav-link" data-page-target="home">الرئيسية</a>
+        <a href="dictionary.html" class="nav-link" data-page-target="dictionary">القاموس الإشاري</a>
+        <a href="grammar.html" class="nav-link" data-page-target="grammar">القواعد والتراكيب</a>
+        <a href="culture.html" class="nav-link" data-page-target="culture">ثقافة الصم</a>
+      </nav>
+
+      <button id="theme-toggle" class="btn btn-sm theme-toggle-btn" aria-label="تبديل الوضع الداكن" title="الوضع الداكن" style="background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-full); width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem; margin-right: 0.75rem;">🌙</button>
+      <button type="button" class="nav-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="container mobile-drawer">
+      <a href="index.html" class="nav-link" data-page-target="home">الرئيسية</a>
+      <a href="dictionary.html" class="nav-link" data-page-target="dictionary">القاموس الإشاري</a>
+      <a href="grammar.html" class="nav-link" data-page-target="grammar">القواعد والتراكيب</a>
+      <a href="culture.html" class="nav-link" data-page-target="culture">ثقافة الصم</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="section">
+      <div class="container">
+        <div class="section-header mb-8">
+          <div class="badge badge-teal mb-2">الوعي المجتمعي والأخلاقي</div>
+          <h1 class="section-title">
+            <span>🤝</span>
+            <span>ثقافة الصم وآداب التعامل (Deaf Culture & Etiquette)</span>
+          </h1>
+          <p class="section-subtitle">
+            التواصل الإنساني مع مجتمع الصم يتجاوز مجرد حفظ الإشارات؛ إنه وعي بثقافة غنية وأعراف مجتمعية تبني جسوراً من الاحترام والتقدير المتبادل.
+          </p>
+        </div>
+
+        <!-- Master Culture Infographic Banner -->
+        <div class="mb-10 text-center">
+          <img src="./assets/images/culture_banner.jpg" alt="ملصق ثقافة الصم وآداب التعامل (ESL)" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 1px solid var(--border); width: 100%; max-height: 420px; object-fit: contain; background: #faf9f6;">
+          <div class="text-xs text-tertiary mt-2">دليل آداب التواصل والاحترام المتبادل المعتمد مع مجتمع الصم وضعاف السمع في مصر</div>
+        </div>
+
+        <div class="grid grid-cols-2 mb-12" id="culture-rules-list">
+          <!-- Populated by culture.js -->
+        </div>
+
+        <!-- Interactive Scenario Quiz -->
+        <div class="section-header mb-4">
+          <h2 class="section-title text-xl">
+            <span>🎯</span>
+            <span>مواقف وتحديات تفاعلية (اختبر تصرفك)</span>
+          </h2>
+          <p class="section-subtitle text-xs">
+            اختر التصرف الأنسب في كل موقف واقعي للتأكد من فهمك لآداب التواصل مع الصم.
+          </p>
+        </div>
+
+        <div class="card" style="border: 2px solid var(--accent-border); background: var(--surface);">
+          <div id="culture-quiz-container">
+            <!-- Populated by culture.js -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand">
+            <img src="./assets/images/logo.png" alt="شعار منصة إشارة" class="brand-logo" style="width: 2.5rem; height: 2.5rem;">
+            <span class="brand-title" style="font-size: var(--text-lg);">منصة إشارة</span>
+          </div>
+          <p class="footer-disclaimer">
+            المحتوى وقاعدة البيانات مستمدان من الوثائق الرسمية والأبحاث اللغوية للغة الإشارة المصرية الطبيعية (ESL)، مع تضمين القواعد الفونولوجية، والبنية النحوية، والإرشادات الثقافية المعتمدة لدى مجتمع الصم في مصر.
+          </p>
+          <p class="footer-disclaimer text-xs text-tertiary mt-2" dir="ltr" style="text-align: left; line-height: 1.5;">
+            The content and database are derived from official documentation and linguistic research on natural Egyptian Sign Language (ESL), incorporating the verified phonological rules, grammar structure, and cultural guidelines used by the Deaf community in Egypt.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">أقسام المنصة</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="dictionary.html">القاموس الإشاري</a></li>
+            <li><a href="grammar.html">القواعد والتراكيب</a></li>
+            <li><a href="culture.html">ثقافة الصم</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">المعايير التقنية</h4>
+          <ul class="footer-links">
+            <li><span class="badge badge-teal">ESL Linguistic Standard</span></li>
+            <li><span class="badge badge-neutral">Topic-Comment Syntax</span></li>
+            <li><span class="badge badge-neutral">Zero Build Vanilla JS</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>جميع الحقوق محفوظة © منصة إشارة 2026 - الدليل المرجعي للغة الإشارة المصرية.</div>
+        <div>تصميم وتطوير بواجهة مستخدم متوافقة مع اللغة العربية (RTL Native).</div>
+      </div>
+
+      <div class="footer-credit-bar">
+        <div class="footer-credit-space"></div>
+        <div class="footer-credit-text">© Zeyad Waled 2026. All rights reserved.</div>
+        <div class="footer-social-links">
+          <a href="https://github.com/Zeyad-101" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-icon-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/zeyad-waled-0100z001/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-icon-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

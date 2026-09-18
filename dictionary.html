@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>القاموس الإشاري الشامل — إشارة (ESL)</title>
+  <meta name="description" content="ابحث وتصفح حروف الهجاء، الأرقام، ومفردات لغة الإشارة المصرية الموثقة بالوصف الفونولوجي الدقيق وقواعد التوجيه.">
+  <meta property="og:title" content="القاموس الإشاري الشامل — إشارة (ESL)">
+  <meta property="og:description" content="ابحث وتصفح حروف الهجاء، الأرقام، ومفردات لغة الإشارة المصرية الموثقة بالوصف الفونولوجي الدقيق وقواعد التوجيه.">
+  <meta property="og:image" content="./assets/images/hero_banner.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16.png">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="apple-touch-icon" sizes="192x192" href="./assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="./css/main.css">
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body data-page="dictionary">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand">
+        <img src="./assets/images/logo.png" alt="شعار منصة إشارة" class="brand-logo" width="48" height="48">
+        <div class="brand-text">
+          <span class="brand-title">إشارة</span>
+          <span class="brand-sub">تعلم لغة الإشارة المصرية</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop" aria-label="التنقل الرئيسي">
+        <a href="index.html" class="nav-link" data-page-target="home">الرئيسية</a>
+        <a href="dictionary.html" class="nav-link" data-page-target="dictionary">القاموس الإشاري</a>
+        <a href="grammar.html" class="nav-link" data-page-target="grammar">القواعد والتراكيب</a>
+        <a href="culture.html" class="nav-link" data-page-target="culture">ثقافة الصم</a>
+      </nav>
+
+      <button id="theme-toggle" class="btn btn-sm theme-toggle-btn" aria-label="تبديل الوضع الداكن" title="الوضع الداكن" style="background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-full); width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem; margin-right: 0.75rem;">🌙</button>
+      <button type="button" class="nav-toggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="container mobile-drawer">
+      <a href="index.html" class="nav-link" data-page-target="home">الرئيسية</a>
+      <a href="dictionary.html" class="nav-link" data-page-target="dictionary">القاموس الإشاري</a>
+      <a href="grammar.html" class="nav-link" data-page-target="grammar">القواعد والتراكيب</a>
+      <a href="culture.html" class="nav-link" data-page-target="culture">ثقافة الصم</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="section" style="padding-top: var(--space-8); padding-bottom: var(--space-4);">
+      <div class="container">
+        <div class="section-header mb-6">
+          <h1 class="section-title">
+            <span>📖</span>
+            <span>القاموس الإشاري المصري الموثق</span>
+          </h1>
+          <p class="section-subtitle">
+            معجم تفاعلي يحتوي على كافة حروف الهجاء الإشارية وقواعد النقاط، نظام الأرقام، والمفردات اللغوية المعتمدة في البيئة المصرية.
+          </p>
+        </div>
+
+        <!-- Search Control -->
+        <div class="search-wrapper mb-4">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="search-input" id="dict-search-input" placeholder="ابحث بالحرف أو الكلمة أو الوصف الحركي (مثال: أهلاً، أب، ياء، انحناء)..." aria-label="البحث في القاموس">
+          <button type="button" class="search-clear hidden" id="dict-search-clear" aria-label="مسح البحث">✕</button>
+        </div>
+
+        <!-- Mode & Filter Bar -->
+        <div class="flex items-center justify-between gap-4 mb-4 flex-wrap">
+          <div class="view-mode-toggle" role="radiogroup" aria-label="طريقة العرض">
+            <button type="button" class="view-mode-btn active" id="mode-browse" aria-checked="true">
+              <span>📚</span>
+              <span>تصفح القاموس</span>
+            </button>
+            <button type="button" class="view-mode-btn" id="mode-practice" aria-checked="false">
+              <span>🎴</span>
+              <span>بطاقات التدريب التفاعلية</span>
+            </button>
+          </div>
+          <div class="text-xs text-tertiary font-bold" id="results-count" style="white-space: nowrap;">
+            جاري التحديث...
+          </div>
+        </div>
+
+        <div class="filter-bar mb-6" id="filter-pills" role="tablist" aria-label="أقسام المعجم">
+          <!-- Filter pills injected by dictionary.js -->
+        </div>
+
+        <!-- Interactive Flashcard Practice Mode Container -->
+        <div id="practice-container" class="hidden">
+          <div class="flashcard-wrapper">
+            <div class="flashcard" id="active-flashcard" tabindex="0" role="button" aria-label="اقلب البطاقة لرؤية الإشارة">
+              <!-- Dynamically populated by dictionary.js -->
+            </div>
+          </div>
+          <div class="flashcard-controls">
+            <button type="button" class="btn btn-secondary btn-sm" id="fc-prev">← الإشارة السابقة</button>
+            <button type="button" class="btn btn-primary btn-sm" id="fc-flip">🔄 اقلب البطاقة (Space)</button>
+            <button type="button" class="btn btn-secondary btn-sm" id="fc-next">الإشارة التالية →</button>
+            <button type="button" class="btn btn-accent btn-sm" id="fc-random">🎲 عشوائي</button>
+          </div>
+          <div class="text-center text-xs text-secondary mt-3">
+            نصيحة: يمكنك استخدام الأسهم ⬅️ ➡️ وزر المسافة (Space) للتنقل والقلب السريع عبر لوحة المفاتيح.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="browse-container">
+      <!-- Alphabet Section -->
+      <section class="section" style="padding-top: 0;">
+        <div class="container">
+          <div class="section-header mb-4">
+            <h2 class="section-title text-xl">
+              <span>✋</span>
+              <span>الأبجدية الإشارية اليدوية (الأصابع والنقاط)</span>
+            </h2>
+            <p class="section-subtitle text-xs">
+              <strong>قاعدة التوجيه:</strong> راحة اليد تواجه المستقبل (المشاهد)، وظهر اليد يواجه المُشير. عدد الأصابع المفرودة يطابق عدد نقاط الحرف المكتوب.
+            </p>
+          </div>
+          <div class="grid grid-alphabet" id="alphabet-grid">
+            <!-- Alphabet cards injected by dictionary.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Numbers Section -->
+      <section class="section section-alt" id="numbers-section">
+        <div class="container">
+          <!-- Numbers rules and samples injected by dictionary.js -->
+        </div>
+      </section>
+
+      <!-- Vocabulary Section -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header mb-4">
+            <h2 class="section-title text-xl">
+              <span>💬</span>
+              <span>مفردات القاموس والمواقف الحياتية</span>
+            </h2>
+            <p class="section-subtitle text-xs">
+              انقر على أي بطاقة لعرض التفاصيل الفونولوجية الدقيقة (شكل اليد، الموضع، الحركة، والتنبيه اللغوي).
+            </p>
+          </div>
+          <div class="grid grid-alphabet" id="vocab-grid">
+            <!-- Vocabulary cards injected by dictionary.js -->
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand">
+            <img src="./assets/images/logo.png" alt="شعار منصة إشارة" class="brand-logo" style="width: 2.5rem; height: 2.5rem;">
+            <span class="brand-title" style="font-size: var(--text-lg);">منصة إشارة</span>
+          </div>
+          <p class="footer-disclaimer">
+            المحتوى وقاعدة البيانات مستمدان من الوثائق الرسمية والأبحاث اللغوية للغة الإشارة المصرية الطبيعية (ESL)، مع تضمين القواعد الفونولوجية، والبنية النحوية، والإرشادات الثقافية المعتمدة لدى مجتمع الصم في مصر.
+          </p>
+          <p class="footer-disclaimer text-xs text-tertiary mt-2" dir="ltr" style="text-align: left; line-height: 1.5;">
+            The content and database are derived from official documentation and linguistic research on natural Egyptian Sign Language (ESL), incorporating the verified phonological rules, grammar structure, and cultural guidelines used by the Deaf community in Egypt.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">أقسام المنصة</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="dictionary.html">القاموس الإشاري</a></li>
+            <li><a href="grammar.html">القواعد والتراكيب</a></li>
+            <li><a href="culture.html">ثقافة الصم</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">المعايير التقنية</h4>
+          <ul class="footer-links">
+            <li><span class="badge badge-teal">ESL Linguistic Standard</span></li>
+            <li><span class="badge badge-neutral">Topic-Comment Syntax</span></li>
+            <li><span class="badge badge-neutral">Zero Build Vanilla JS</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>جميع الحقوق محفوظة © منصة إشارة 2026 - الدليل المرجعي للغة الإشارة المصرية.</div>
+        <div>تصميم وتطوير بواجهة مستخدم متوافقة مع اللغة العربية (RTL Native).</div>
+      </div>
+
+      <div class="footer-credit-bar">
+        <div class="footer-credit-space"></div>
+        <div class="footer-credit-text">© Zeyad Waled 2026. All rights reserved.</div>
+        <div class="footer-social-links">
+          <a href="https://github.com/Zeyad-101" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-icon-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/zeyad-waled-0100z001/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-icon-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

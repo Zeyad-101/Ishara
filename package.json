@@ -1,0 +1,25 @@
+{
+  "name": "ishara-esl",
+  "version": "1.0.0",
+  "description": "Verified Egyptian Sign Language (ESL) Digital Platform & Reference",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/verify_esl_data.js && node tests/verify_comprehensive_gui.js && node tests/verify_media_assets.js && node tests/verify_theme_toggle.js && node tests/verify_html_links.js && node tests/verify_publish_ready.js",
+    "test:data": "node tests/verify_esl_data.js",
+    "test:gui": "node tests/verify_comprehensive_gui.js",
+    "test:media": "node tests/verify_media_assets.js",
+    "test:theme": "node tests/verify_theme_toggle.js",
+    "generate:vocab": "python scripts/generate_all_vocab_photos.py",
+    "start": "python -m http.server 8080"
+  },
+  "keywords": [
+    "egyptian-sign-language",
+    "esl",
+    "sign-language",
+    "arabic",
+    "accessibility",
+    "deaf-culture"
+  ],
+  "author": "Ishara Team",
+  "license": "MIT"
+}

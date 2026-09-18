@@ -1,0 +1,9 @@
+/* ==========================================================================
+   Ishara — Main CSS Entrypoint
+   Conforming to Freelance Client Template structure rules
+   ========================================================================== */
+
+@import "./base.css";
+@import "./layout.css";
+@import "./components.css";
+@import "./utilities.css";
