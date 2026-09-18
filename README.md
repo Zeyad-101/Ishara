@@ -8,7 +8,6 @@
 
 [![Live Site](https://img.shields.io/badge/live-ishara--xi.vercel.app-0BC5EA?style=flat-square&logo=vercel&logoColor=white)](https://ishara-xi.vercel.app/)
 ![HTML/CSS/JS](https://img.shields.io/badge/stack-vanilla%20HTML%2FCSS%2FJS-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![No framework](https://img.shields.io/badge/framework-none-informational?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
 </div>
