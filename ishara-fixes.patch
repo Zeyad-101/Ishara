@@ -1,0 +1,268 @@
+From 7497fec159db2cdc3855c6454c8fb194f9672d29 Mon Sep 17 00:00:00 2001
+From: a <a@a.com>
+Date: Sat, 19 Sep 2026 00:01:18 +0000
+Subject: [PATCH] fix sitemap domain, add gitignore, archive dead scripts, add
+ README
+
+---
+ .gitignore                                    | 12 +++
+ README.md                                     | 86 +++++++++++++++++++
+ robots.txt                                    |  2 +-
+ .../{ => archive}/append_final_30_vocab.py    |  0
+ .../{ => archive}/append_new_vocab_data.py    |  0
+ scripts/{ => archive}/bypass_rembg.py         |  0
+ scripts/{ => archive}/fix_html.py             |  0
+ .../generate_all_consistent_lineart_hands.js  |  0
+ .../{ => archive}/generate_all_vocab_svgs.js  |  0
+ .../generate_animated_hand_svgs.js            |  0
+ .../generate_expanded_vocab_signs.py          |  0
+ .../generate_final_vocab_signs.py             |  0
+ .../generate_flat_lineart_hand_svgs.js        |  0
+ scripts/{ => archive}/generate_hand_svgs.js   |  0
+ .../{ => archive}/generate_pollinations.py    |  0
+ scripts/{ => archive}/generate_vectors.py     |  0
+ scripts/{ => archive}/inject_dark_mode.py     |  0
+ scripts/{ => archive}/process_hand_photos.py  |  0
+ scripts/{ => archive}/update_logo_assets.py   |  0
+ sitemap.xml                                   |  8 +-
+ 20 files changed, 103 insertions(+), 5 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ rename scripts/{ => archive}/append_final_30_vocab.py (100%)
+ rename scripts/{ => archive}/append_new_vocab_data.py (100%)
+ rename scripts/{ => archive}/bypass_rembg.py (100%)
+ rename scripts/{ => archive}/fix_html.py (100%)
+ rename scripts/{ => archive}/generate_all_consistent_lineart_hands.js (100%)
+ rename scripts/{ => archive}/generate_all_vocab_svgs.js (100%)
+ rename scripts/{ => archive}/generate_animated_hand_svgs.js (100%)
+ rename scripts/{ => archive}/generate_expanded_vocab_signs.py (100%)
+ rename scripts/{ => archive}/generate_final_vocab_signs.py (100%)
+ rename scripts/{ => archive}/generate_flat_lineart_hand_svgs.js (100%)
+ rename scripts/{ => archive}/generate_hand_svgs.js (100%)
+ rename scripts/{ => archive}/generate_pollinations.py (100%)
+ rename scripts/{ => archive}/generate_vectors.py (100%)
+ rename scripts/{ => archive}/inject_dark_mode.py (100%)
+ rename scripts/{ => archive}/process_hand_photos.py (100%)
+ rename scripts/{ => archive}/update_logo_assets.py (100%)
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..1e83a42
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,12 @@
++# Python
++__pycache__/
++*.pyc
++.venv/
++venv/
++
++# Node
++node_modules/
++
++# OS
++.DS_Store
++Thumbs.db
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..ef6aac1
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,86 @@
++<div align="center">
++
++<img src="./assets/images/logo.png" width="90" alt="Ishara logo" />
++
++# إشارة (Ishara)
++
++**A visual reference for Egyptian Sign Language (ESL)**
++
++[![Live Site](https://img.shields.io/badge/live-ishara--xi.vercel.app-0BC5EA?style=flat-square&logo=vercel&logoColor=white)](https://ishara-xi.vercel.app/)
++![HTML/CSS/JS](https://img.shields.io/badge/stack-vanilla%20HTML%2FCSS%2FJS-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
++![No framework](https://img.shields.io/badge/framework-none-informational?style=flat-square)
++![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
++
++</div>
++
++---
++
++## Why this exists
++
++Egyptian Sign Language has documentation, but almost all of it lives in books, PDFs, and academic papers with no visuals. You can read a sentence describing how to sign a letter or a word, but you can't see the hand shape it's describing.
++
++Ishara takes that written documentation, alphabet rules, numbers, vocabulary, grammar structure, and Deaf-culture etiquette, and turns it into something you can actually look at: a hand image for every sign, organized into a searchable, browsable reference. Every entry ties back to the source material it was drawn from, so the content stays traceable to real research instead of inventing signs.
++
++## What's in it
++
++| Section | Contents |
++|---|---|
++| ✋ Alphabet | 31 letters, with the hand shape, orientation, and phonological rule behind each one |
++| 🔢 Numbers | Units, tens, hundreds, and thousands, each with its own hand-orientation rule |
++| 💬 Vocabulary | 87 words across 16 categories (daily words, greetings, family, food, home, school, emotions, animals, time, colors, health, clothes, expressions), each with a phonological description and a difficulty level |
++| 🧩 Grammar | Sentence structure (Time → Subject → Object → Verb), with spoken-Arabic vs. ESL example pairs |
++| 🤝 Deaf culture | Etiquette notes, such as how to get someone's attention respectfully, sourced from documented community norms |
++
++## How it's built
++
++Static site, no framework, no build step.
++
++Plain HTML/CSS/JS with ES modules, one page per section (`index.html`, `dictionary.html`, `grammar.html`, `culture.html`). All content lives in a single `data/content.json`, loaded at runtime by `js/services/content.js`. Each page has its own module under `js/pages/`, dynamically imported based on the page's `data-page` attribute. Dictionary search and category filters run entirely client-side over the JSON, with no backend involved. The site supports dark mode and a full RTL Arabic layout.
++
++### The images
++
++The hand illustrations aren't stock photos. They're composited from real hand-photo bases, with the pose and any motion arrows added according to the phonological description in the data. `scripts/` holds the generation pipeline (Pillow-based compositing, plus some SVG-based hand-drawing experiments) used to produce and iterate on the sign images in `assets/signs/`.
++
++## Project structure
++
++```
++├── index.html / dictionary.html / grammar.html / culture.html
++├── css/                  # base, layout, components, utilities
++├── js/
++│   ├── main.js           # entrypoint, loads the right page module
++│   ├── pages/            # one module per page
++│   ├── components/       # nav, modal, theme toggle
++│   └── services/         # content.js, reads data/content.json
++├── data/content.json     # every letter, number, word, grammar rule, culture note
++├── assets/signs/         # generated hand images (132 files)
++├── scripts/              # image-generation pipeline
++└── tests/                # data integrity, GUI, media, theme, link, and publish-readiness checks
++```
++
++## Running it locally
++
++No dependencies to install, since it's static HTML/CSS/JS.
++
++```bash
++git clone https://github.com/Zeyad-101/Ishara.git
++cd Ishara
++npm start        # serves the site at http://localhost:8080
++```
++
++## Tests
++
++```bash
++npm test              # full suite
++npm run test:data     # validates content.json structure
++npm run test:gui      # checks pages render expected elements
++npm run test:media    # confirms every referenced image actually exists
++npm run test:theme    # dark mode toggle
++```
++
++## Deployment
++
++Deployed on Vercel as a static site. `robots.txt` and `sitemap.xml` are already set up for indexing.
++
++## License
++
++MIT
+diff --git a/robots.txt b/robots.txt
+index 36e4810..bb60d5d 100644
+--- a/robots.txt
++++ b/robots.txt
+@@ -1,4 +1,4 @@
+ User-agent: *
+ Allow: /
+ 
+-Sitemap: https://ishara-esl.org/sitemap.xml
++Sitemap: https://ishara-xi.vercel.app/sitemap.xml
+diff --git a/scripts/append_final_30_vocab.py b/scripts/archive/append_final_30_vocab.py
+similarity index 100%
+rename from scripts/append_final_30_vocab.py
+rename to scripts/archive/append_final_30_vocab.py
+diff --git a/scripts/append_new_vocab_data.py b/scripts/archive/append_new_vocab_data.py
+similarity index 100%
+rename from scripts/append_new_vocab_data.py
+rename to scripts/archive/append_new_vocab_data.py
+diff --git a/scripts/bypass_rembg.py b/scripts/archive/bypass_rembg.py
+similarity index 100%
+rename from scripts/bypass_rembg.py
+rename to scripts/archive/bypass_rembg.py
+diff --git a/scripts/fix_html.py b/scripts/archive/fix_html.py
+similarity index 100%
+rename from scripts/fix_html.py
+rename to scripts/archive/fix_html.py
+diff --git a/scripts/generate_all_consistent_lineart_hands.js b/scripts/archive/generate_all_consistent_lineart_hands.js
+similarity index 100%
+rename from scripts/generate_all_consistent_lineart_hands.js
+rename to scripts/archive/generate_all_consistent_lineart_hands.js
+diff --git a/scripts/generate_all_vocab_svgs.js b/scripts/archive/generate_all_vocab_svgs.js
+similarity index 100%
+rename from scripts/generate_all_vocab_svgs.js
+rename to scripts/archive/generate_all_vocab_svgs.js
+diff --git a/scripts/generate_animated_hand_svgs.js b/scripts/archive/generate_animated_hand_svgs.js
+similarity index 100%
+rename from scripts/generate_animated_hand_svgs.js
+rename to scripts/archive/generate_animated_hand_svgs.js
+diff --git a/scripts/generate_expanded_vocab_signs.py b/scripts/archive/generate_expanded_vocab_signs.py
+similarity index 100%
+rename from scripts/generate_expanded_vocab_signs.py
+rename to scripts/archive/generate_expanded_vocab_signs.py
+diff --git a/scripts/generate_final_vocab_signs.py b/scripts/archive/generate_final_vocab_signs.py
+similarity index 100%
+rename from scripts/generate_final_vocab_signs.py
+rename to scripts/archive/generate_final_vocab_signs.py
+diff --git a/scripts/generate_flat_lineart_hand_svgs.js b/scripts/archive/generate_flat_lineart_hand_svgs.js
+similarity index 100%
+rename from scripts/generate_flat_lineart_hand_svgs.js
+rename to scripts/archive/generate_flat_lineart_hand_svgs.js
+diff --git a/scripts/generate_hand_svgs.js b/scripts/archive/generate_hand_svgs.js
+similarity index 100%
+rename from scripts/generate_hand_svgs.js
+rename to scripts/archive/generate_hand_svgs.js
+diff --git a/scripts/generate_pollinations.py b/scripts/archive/generate_pollinations.py
+similarity index 100%
+rename from scripts/generate_pollinations.py
+rename to scripts/archive/generate_pollinations.py
+diff --git a/scripts/generate_vectors.py b/scripts/archive/generate_vectors.py
+similarity index 100%
+rename from scripts/generate_vectors.py
+rename to scripts/archive/generate_vectors.py
+diff --git a/scripts/inject_dark_mode.py b/scripts/archive/inject_dark_mode.py
+similarity index 100%
+rename from scripts/inject_dark_mode.py
+rename to scripts/archive/inject_dark_mode.py
+diff --git a/scripts/process_hand_photos.py b/scripts/archive/process_hand_photos.py
+similarity index 100%
+rename from scripts/process_hand_photos.py
+rename to scripts/archive/process_hand_photos.py
+diff --git a/scripts/update_logo_assets.py b/scripts/archive/update_logo_assets.py
+similarity index 100%
+rename from scripts/update_logo_assets.py
+rename to scripts/archive/update_logo_assets.py
+diff --git a/sitemap.xml b/sitemap.xml
+index b3b131b..0739216 100644
+--- a/sitemap.xml
++++ b/sitemap.xml
+@@ -1,25 +1,25 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+-    <loc>https://ishara-esl.org/</loc>
++    <loc>https://ishara-xi.vercel.app/</loc>
+     <lastmod>2026-09-19</lastmod>
+     <changefreq>weekly</changefreq>
+     <priority>1.0</priority>
+   </url>
+   <url>
+-    <loc>https://ishara-esl.org/dictionary.html</loc>
++    <loc>https://ishara-xi.vercel.app/dictionary.html</loc>
+     <lastmod>2026-09-19</lastmod>
+     <changefreq>weekly</changefreq>
+     <priority>0.9</priority>
+   </url>
+   <url>
+-    <loc>https://ishara-esl.org/grammar.html</loc>
++    <loc>https://ishara-xi.vercel.app/grammar.html</loc>
+     <lastmod>2026-09-19</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+   <url>
+-    <loc>https://ishara-esl.org/culture.html</loc>
++    <loc>https://ishara-xi.vercel.app/culture.html</loc>
+     <lastmod>2026-09-19</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+-- 
+2.43.0
+
